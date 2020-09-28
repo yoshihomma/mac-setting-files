@@ -1,0 +1,3 @@
+# ~/.inputrc
+# Use Vi, not Emacs, style editing
+set editing-mode vi
