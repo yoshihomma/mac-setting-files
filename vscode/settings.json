@@ -1,0 +1,115 @@
+{
+  "editor.fontFamily": "hack",
+  "editor.rulers": [
+    80
+  ],
+  "python.linting.flake8CategorySeverity.E": "Warning",
+  "python.linting.flake8CategorySeverity.F": "Warning",
+  "python.pythonPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "window.zoomLevel": 0,
+  "workbench.startupEditor": "newUntitledFile",
+  "html.format.enable": false,
+  "editor.formatOnPaste": true,
+  "autoDocstring.docstringFormat": "google",
+  "sync.gist": "08e352f79fb3e340f9821e91cf2de331",
+  "latex-workshop.chktex.enabled": true,
+  "latex-workshop.latex.toolchain": [
+    {
+      "command": "ptex2pdf",
+      "args": [
+        "-l",
+        "-ot",
+        "-kanji=utf8 -synctex=1",
+        "%DOC%"
+      ]
+    }
+  ], //今回の原因となった自動アプデをしない
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "ptex2pdf",
+      "tools": [
+        "ptex2pdf" //タイプセットに使うtoolの名前
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    //タイプセットに使うtool一覧
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "ptex2pdf", //ptex2pdf自体の設定はこれまでと一緒
+      "command": "ptex2pdf",
+      "args": [
+        "-l",
+        "-ot",
+        "-kanji=utf8 -synctex=1",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "editor.minimap.enabled": true,
+  "C_Cpp.default.cppStandard": "c++11",
+  "python.condaPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
+  "python.formatting.autopep8Args": [
+    "--ignore",
+    "E402"
+  ],
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    ".idea": true,
+    ".vscode": true,
+    "**/__pycache__": true,
+    "log/": true,
+    "save_model/": true
+  },
+  "latex-workshop.view.pdf.viewer": "browser",
+  "sync.autoUpload": true,
+  "extensions.autoUpdate": false,
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "vsintellicode.python.completionsEnabled": false,
+  "python.dataScience.sendSelectionToInteractiveWindow": true,
+  "sync.forceUpload": true,
+  "terminal.integrated.inheritEnv": false,
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "[cpp]": {
+    "editor.tabSize": 2
+  },
+  "editor.renderWhitespace": "all",
+  "workbench.iconTheme": "material-icon-theme",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "workbench.colorTheme": "Community Material Theme High Contrast",
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "desk": "linux",
+    "db24-1": "linux"
+  },
+  "workbench.editor.showTabs": true
+}
