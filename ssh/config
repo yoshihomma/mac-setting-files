@@ -3,7 +3,11 @@ Host db303
     HostName 192.168.100.48
     User honma
     IdentityFile /Users/yoshiaki/.ssh/id_rsa
-Host desk303
+Host desk
+    HostName 172.25.231.49
+    User yoshiaki
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+Host desk-local
     HostName 192.168.100.21
     User yoshiaki
     IdentityFile /Users/yoshiaki/.ssh/id_rsa
