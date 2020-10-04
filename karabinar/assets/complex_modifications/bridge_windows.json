@@ -477,6 +477,88 @@
           ]
         }
       ]
+    },
+    {
+      "description": "cmd+f <=> ctrl+f",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.microsoft\\.VSCode"]
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.microsoft\\.VSCode"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "cmd+z <=> ctrl+z",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["command"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
     }
   ]
 }
