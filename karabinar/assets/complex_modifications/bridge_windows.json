@@ -139,6 +139,48 @@
               "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
             }
           ]
+        },
+        {
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["command", "shift"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["command", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["control", "shift"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
         }
       ]
     },
@@ -312,6 +354,48 @@
             {
               "key_code": "s",
               "modifiers": ["control"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": ["command", "shift"]
+            }
+          ],
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["command", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": ["control", "shift"]
             }
           ],
           "type": "basic",
@@ -554,6 +638,36 @@
             {
               "key_code": "z",
               "modifiers": ["control"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["control", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": ["command", "shift"]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["command", "shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": ["control", "shift"]
             }
           ],
           "type": "basic"
