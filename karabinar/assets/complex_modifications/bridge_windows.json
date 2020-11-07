@@ -279,47 +279,6 @@
       ]
     },
     {
-      "description": "cmd+a <=> ctrl+a",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "a",
-            "modifiers": {
-              "mandatory": ["control"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "a",
-              "modifiers": ["command"]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "a",
-            "modifiers": {
-              "mandatory": ["command"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "a",
-              "modifiers": ["control"]
-            }
-          ],
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description": "cmd+s <=> ctrl+s",
       "manipulators": [
         {
