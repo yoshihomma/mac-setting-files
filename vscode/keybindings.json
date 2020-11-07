@@ -22,7 +22,7 @@
   },
   {
     "key": "down",
-    "command": "-cursorDown",
+    "command": "cursorDown",
     "when": "textInputFocus"
   },
   {
@@ -37,7 +37,7 @@
   },
   {
     "key": "down",
-    "command": "-selectNextSuggestion",
+    "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
@@ -194,6 +194,11 @@
     "when": "textInputFocus && vim.active && vim.mode=='Insert'"
   },
   {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
     "key": "ctrl+h",
     "command": "cursorLeft",
     "when": "textInputFocus && vim.active && vim.mode=='Insert'"
@@ -207,6 +212,11 @@
     "key": "ctrl+k",
     "command": "cursorUp",
     "when": "textInputFocus && vim.active && vim.mode=='Insert'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
     "key": "ctrl+h",

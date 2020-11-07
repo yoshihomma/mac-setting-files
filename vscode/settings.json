@@ -1,8 +1,6 @@
 {
   "editor.fontFamily": "hack",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "python.linting.flake8CategorySeverity.E": "Warning",
   "python.linting.flake8CategorySeverity.F": "Warning",
   "python.pythonPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
@@ -18,12 +16,7 @@
   "latex-workshop.latex.toolchain": [
     {
       "command": "ptex2pdf",
-      "args": [
-        "-l",
-        "-ot",
-        "-kanji=utf8 -synctex=1",
-        "%DOC%"
-      ]
+      "args": ["-l", "-ot", "-kanji=utf8 -synctex=1", "%DOC%"]
     }
   ], //今回の原因となった自動アプデをしない
   "latex-workshop.latex.recipes": [
@@ -50,28 +43,18 @@
     {
       "name": "ptex2pdf", //ptex2pdf自体の設定はこれまでと一緒
       "command": "ptex2pdf",
-      "args": [
-        "-l",
-        "-ot",
-        "-kanji=utf8 -synctex=1",
-        "%DOC%"
-      ]
+      "args": ["-l", "-ot", "-kanji=utf8 -synctex=1", "%DOC%"]
     },
     {
       "name": "bibtex",
       "command": "bibtex",
-      "args": [
-        "%DOCFILE%"
-      ]
+      "args": ["%DOCFILE%"]
     }
   ],
   "editor.minimap.enabled": true,
   "C_Cpp.default.cppStandard": "c++11",
   "python.condaPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
-  "python.formatting.autopep8Args": [
-    "--ignore",
-    "E402"
-  ],
+  "python.formatting.autopep8Args": ["--ignore", "E402"],
   "editor.wordWrap": "on",
   "files.exclude": {
     ".idea": true,
@@ -102,14 +85,17 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
   },
   "todo-tree.tree.showScanModeButton": false,
   "workbench.colorTheme": "Community Material Theme High Contrast",
   "remote.SSH.useLocalServer": false,
   "remote.SSH.remotePlatform": {
     "desk": "linux",
-    "db24-1": "linux"
+    "db24-1": "linux",
+    "ozasalab-0": "linux",
+    "ozasalab-1": "linux"
   },
   "workbench.editor.showTabs": true
 }
