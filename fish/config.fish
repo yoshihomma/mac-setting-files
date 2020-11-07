@@ -22,3 +22,7 @@ alias gpp='g++'
 eval (anyenv init - | source)
 
 fish_vi_key_bindings
+
+# github cli
+eval (gh completion -s fish| source)
+
