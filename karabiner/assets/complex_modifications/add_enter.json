@@ -1,0 +1,24 @@
+{
+  "title": "Add Enter",
+  "rules": [
+    {
+      "description": "Add Enter",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
