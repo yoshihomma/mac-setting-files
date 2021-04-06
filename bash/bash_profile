@@ -35,3 +35,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 eval "$(anyenv init -)"
+
+# MySQL
+export PATH=/usr/local/mysql/bin:$PATH

@@ -1,0 +1,4 @@
+dl-grive () {
+    python ws/hobby/python/myrepos/download-gdrive/main.py ${1} ${2}
+}
+eval "$(anyenv init -)"

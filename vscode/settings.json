@@ -6,51 +6,11 @@
   "python.pythonPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
-  "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
   "html.format.enable": false,
   "editor.formatOnPaste": true,
   "autoDocstring.docstringFormat": "google",
   "sync.gist": "08e352f79fb3e340f9821e91cf2de331",
-  "latex-workshop.chktex.enabled": true,
-  "latex-workshop.latex.toolchain": [
-    {
-      "command": "ptex2pdf",
-      "args": ["-l", "-ot", "-kanji=utf8 -synctex=1", "%DOC%"]
-    }
-  ], //今回の原因となった自動アプデをしない
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "ptex2pdf",
-      "tools": [
-        "ptex2pdf" //タイプセットに使うtoolの名前
-      ]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    //タイプセットに使うtool一覧
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "ptex2pdf", //ptex2pdf自体の設定はこれまでと一緒
-      "command": "ptex2pdf",
-      "args": ["-l", "-ot", "-kanji=utf8 -synctex=1", "%DOC%"]
-    },
-    {
-      "name": "bibtex",
-      "command": "bibtex",
-      "args": ["%DOCFILE%"]
-    }
-  ],
   "editor.minimap.enabled": true,
   "C_Cpp.default.cppStandard": "c++11",
   "python.condaPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
@@ -61,7 +21,11 @@
     ".vscode": true,
     "**/__pycache__": true,
     "log/": true,
-    "save_model/": true
+    "save_model/": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
   "latex-workshop.view.pdf.viewer": "browser",
   "sync.autoUpload": true,
@@ -70,32 +34,144 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "vsintellicode.python.completionsEnabled": false,
-  "python.dataScience.sendSelectionToInteractiveWindow": true,
   "sync.forceUpload": true,
   "terminal.integrated.inheritEnv": false,
-  "[html]": {
-    "editor.tabSize": 2
-  },
+
   "C_Cpp.clang_format_fallbackStyle": "Google",
   "[cpp]": {
     "editor.tabSize": 2
   },
   "editor.renderWhitespace": "all",
   "workbench.iconTheme": "material-icon-theme",
-  "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
-  },
   "todo-tree.tree.showScanModeButton": false,
-  "workbench.colorTheme": "Community Material Theme High Contrast",
   "remote.SSH.useLocalServer": false,
   "remote.SSH.remotePlatform": {
     "desk": "linux",
     "db24-1": "linux",
     "ozasalab-0": "linux",
-    "ozasalab-1": "linux"
+    "ozasalab-1": "linux",
+    "db24-3": "linux",
+    "db24-0": "linux",
+    "ozasalab-2": "linux"
   },
-  "workbench.editor.showTabs": true
+  "workbench.editor.showTabs": true,
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "python.showStartPage": false,
+  "python.languageServer": "Pylance",
+  "workbench.colorTheme": "GitHub Dark",
+
+  // Latex
+  "[tex]": {
+    // スニペット補完中にも補完を使えるようにする
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // インデント幅を2にする
+    "editor.tabSize": 2
+  },
+  "[latex]": {
+    // スニペット補完中にも補完を使えるようにする
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // インデント幅を2にする
+    "editor.tabSize": 2
+  },
+  "[bibtex]": {
+    // インデント幅を2にする
+    "editor.tabSize": 2
+  },
+  // ---------- LaTeX Workshop ----------
+  // 使用パッケージのコマンドや環境の補完を有効にする
+  "latex-workshop.intellisense.package.enabled": true,
+  // 生成ファイルを削除するときに対象とするファイル
+  // デフォルト値に "*.synctex.gz" を追加
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.nav",
+    "*.dvi",
+    "*.synctex.gz"
+  ],
+  // 生成ファイルを "out" ディレクトリに吐き出す
+  // "latex-workshop.latex.outDir": "out",
+  // ビルドのレシピ
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+  // ビルドのレシピに使われるパーツ
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": ["-silent", "-outdir=%OUTDIR%", "%DOC%"]
+    }
+  ],
+  "docker.host": "ssh://homma@10.243.204.248",
+  "python.sortImports.args": ["--src=${workspaceFolder}"],
+
+  //// Language wise setting
+  // html
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  // JavaScript and TypeScript
+  "eslint.packageManager": "yarn",
+   // JavaScript
+   "[javascript]": {
+     "editor.defaultFormatter": "esbenp.prettier-vscode",
+   },
+   // TypeScript
+   "[typescript]": {
+     "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   // TypeScript React
+   "[typescriptreact]": {
+     "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   // GraphQL
+   "[graphql]": {
+     "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+    "source.organizeImports": true
+  },
+  // css
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  // scss
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  // less
+  "[less]": {
+    "editor.formatOnSave": false
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "workbench.editorAssociations": [],
 }

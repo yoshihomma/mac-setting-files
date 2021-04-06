@@ -21,22 +21,12 @@
     "when": "textInputFocus"
   },
   {
-    "key": "down",
-    "command": "cursorDown",
-    "when": "textInputFocus"
-  },
-  {
     "key": "up",
     "command": "-cursorUp",
     "when": "textInputFocus"
   },
   {
     "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "down",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
@@ -99,7 +89,6 @@
     "key": "ctrl+0",
     "command": "-workbench.action.lastEditorInGroup"
   },
-
   // move between explore and editor
   {
     "key": "ctrl+e",
@@ -111,7 +100,6 @@
     "command": "workbench.action.lastEditorInGroup",
     "when": "sideBarFocus"
   },
-
   {
     "key": "cmd+0",
     "command": "-workbench.action.focusSideBar"
@@ -132,37 +120,45 @@
     "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
   },
   // side-effect of Bridge Windows Shortcuts in Karabiner
+  // {
+  //   "key": "cmd+v",
+  //   "command": "extension.vim_ctrl+v",
+  //   "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode=='Normal'"
+  // },
+  // {
+  //   "key": "ctrl+v",
+  //   "command": "-extension.vim_ctrl+v",
+  //   "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+  // },
   {
-    "key": "cmd+v",
-    "command": "extension.vim_ctrl+v",
-    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && vim.mode=='Normal'"
-  },
-  {
-    "key": "ctrl+v",
-    "command": "-extension.vim_ctrl+v",
-    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
-  },
-  {
-    "key": "cmd+w",
+    "key": "ctrl+w",
+    // "key": "cmd+w",
     "command": "extension.vim_ctrl+w",
     "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl && vim.mode=='Insert'"
   },
   {
-    "key": "ctrl+w",
+    "key": "cmd+w",
+    // "key": "ctrl+w",
     "command": "-extension.vim_ctrl+w",
     "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
   },
   {
-    "key": "cmd+w",
+    "key": "ctrl+w",
+    // "key": "cmd+w",
     "command": "-workbench.action.closeWindow",
     "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    // "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+cmd+w",
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+k cmd+s",
+    "key": "cmd+k cmd+s",
     "command": "workbench.action.openGlobalKeybindings"
   },
   {
@@ -176,10 +172,6 @@
   {
     "key": "shift+cmd+p",
     "command": "-workbench.action.showCommands"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeActiveEditor"
   },
   {
     "key": "alt+h",
@@ -197,6 +189,11 @@
     "key": "ctrl+j",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
   },
   {
     "key": "ctrl+h",
@@ -217,6 +214,11 @@
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+  "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
   },
   {
     "key": "ctrl+h",
@@ -263,22 +265,26 @@
   // ----------
   // move window
   {
-    "key": "cmd+w k",
+    "key": "ctrl+w k",
+    // "key": "cmd+w k",
     "command": "workbench.action.focusAboveGroup",
     "when": "vim.active && vim.mode=='Normal'"
   },
   {
-    "key": "cmd+w j",
+    "key": "ctrl+w j",
+    // "key": "cmd+w j",
     "command": "workbench.action.focusBelowGroup",
     "when": "vim.active && vim.mode=='Normal'"
   },
   {
-    "key": "cmd+w h",
+    "key": "ctrl+w h",
+    // "key": "cmd+w h",
     "command": "workbench.action.focusLeftGroup",
     "when": "vim.active && vim.mode=='Normal'"
   },
   {
-    "key": "cmd+w l",
+    "key": "ctrl+w l",
+    // "key": "cmd+w l",
     "command": "workbench.action.focusRightGroup",
     "when": "vim.active && vim.mode=='Normal'"
   },
@@ -287,13 +293,30 @@
     "command": "-workbench.action.toggleTabsVisibility"
   },
   {
-    "key": "cmd+w ctrl+l",
+    "key": "ctrl+w ctrl+l",
+    // "key": "cmd+w ctrl+l",
     "command": "workbench.action.moveEditorToNextGroup",
     "when": "vim.active && vim.mode=='Normal'"
   },
   {
-    "key": "cmd+w ctrl+h",
+    "key": "ctrl+w ctrl+h",
+    // "key": "cmd+w ctrl+h",
     "command": "workbench.action.moveEditorToPreviousGroup",
     "when": "vim.active && vim.mode=='Normal'"
+  },
+  {
+    "key": "shift+enter",
+    "command": "-jupyter.runcurrentcelladvance",
+    "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+  },
+  {
+    "key": "shift+enter",
+    "command": "-jupyter.execSelectionInteractive",
+    "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "history.showPrevious",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
   }
 ]

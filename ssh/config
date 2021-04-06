@@ -1,4 +1,33 @@
 # Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host ozasalab-1
+    HostName 10.243.204.248
+    User homma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+Host ozasalab-2
+    HostName 10.243.150.14
+    User homma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+Host db24-0
+    HostName 172.25.250.51
+    User homma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+Host db24-1
+    HostName 192.168.195.17
+    User homma
+Host db24-2
+    HostName 192.168.195.166
+    User honma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+Host db24-3
+    HostName 192.168.195.65
+    User honma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+
+Host crest-super-01
+    HostName 192.168.0.82
+    User homma
+    IdentityFile /Users/yoshiaki/.ssh/id_rsa
+
 Host db303
     HostName 192.168.100.48
     User honma
@@ -26,10 +55,6 @@ Host crest_home
     HostName 192.168.3.28
     User crest
     IdentityFile /Users/yoshiaki/.ssh/id_rsa
-Host db24-0
-    HostName 192.168.195.51
-    User homma
-    IdentityFile /Users/yoshiaki/.ssh/id_rsa
 Host db24-0-local
     HostName 192.168.0.20
     User homma
@@ -39,24 +64,7 @@ Host db24-1
     User homma
     IdentityFile /Users/yoshiaki/.ssh/id_rsa
 Host db24-1-local
-    HostName 192.168.0.96
-    User homma
-    IdentityFile /Users/yoshiaki/.ssh/id_rsa
-Host db24-2
-    HostName 192.168.195.166
-    User honma
-    IdentityFile /Users/yoshiaki/.ssh/id_rsa
-Host crest-super-01
-    HostName 192.168.0.82
+    HostName 192.168.11.5
     User homma
     IdentityFile /Users/yoshiaki/.ssh/id_rsa
 
-Host ozasalab-0
-    HostName 10.243.150.14
-    User homma
-    IdentityFile /Users/yoshiaki/.ssh/id_rsa
-
-Host ozasalab-1
-    HostName 10.243.204.248
-    User homma
-    IdentityFile /Users/yoshiaki/.ssh/id_rsa
