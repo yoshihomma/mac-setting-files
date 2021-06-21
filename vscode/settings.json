@@ -10,8 +10,7 @@
   "html.format.enable": false,
   "editor.formatOnPaste": true,
   "autoDocstring.docstringFormat": "google",
-  "sync.gist": "08e352f79fb3e340f9821e91cf2de331",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "C_Cpp.default.cppStandard": "c++11",
   "python.condaPath": "/Users/yoshiaki/anaconda3/envs/py3/bin/python",
   "python.formatting.autopep8Args": ["--ignore", "E402"],
@@ -29,7 +28,6 @@
   },
   "latex-workshop.view.pdf.viewer": "browser",
   "sync.autoUpload": true,
-  "extensions.autoUpdate": false,
   "editor.formatOnSave": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -173,5 +171,9 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "workbench.editorAssociations": [],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "sync.gist": "f996461a3921aaa750bcef0ceda0742d",
+  "editor.fontSize": 11,
 }
